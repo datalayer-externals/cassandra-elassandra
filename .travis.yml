@@ -27,6 +27,7 @@ addons:
       - bash
       - python3-pip
       - python3-setuptools
+      - python3-wheel
 
 jdk:
   - openjdk8
@@ -49,7 +50,7 @@ cache:
 before_install:
   - wget -qO ecm-ccm-elassandra.zip https://github.com/strapdata/ecm/archive/ccm-elassandra.zip
   - unzip ecm-ccm-elassandra.zip && cd ecm-ccm-elassandra && sudo ./setup.py install
-  - pip3 install sphinx~=1.8.5 sphinx_rtd_theme
+  - pip3 install wheel sphinx~=1.8.5 sphinx_rtd_theme
   - sudo fallocate -l 4G /swapfile
   - sudo chmod 600 /swapfile
   - sudo mkswap /swapfile
