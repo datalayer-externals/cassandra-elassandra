@@ -26,6 +26,7 @@ addons:
       - jq
       - bash
       - python3-pip
+      - python3-setuptools
 
 jdk:
   - openjdk8
